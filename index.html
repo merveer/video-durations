@@ -186,7 +186,9 @@
   const seconds = timeData
   .map(node =>node.dataset.time) //list of strings
   .map(timeCode => {
-    const [mins, secs] = timeCode.split(':');
+    const [mins, secs] = timeCode.split(':')
+  .map(parseFloat)
+    return (mins * 60) + secs
     console.log(mins, secs)
   }) // turn into seconds
 </script>
