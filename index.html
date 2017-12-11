@@ -191,6 +191,7 @@
     return (mins * 60) + secs
     console.log(mins, secs)
   }) // turn into seconds
+  .reduce((total, vidSeconds) => total + vidSeconds);
 </script>
 </body>
 </html>
