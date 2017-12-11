@@ -192,6 +192,15 @@
     console.log(mins, secs)
   }) // turn into seconds
   .reduce((total, vidSeconds) => total + vidSeconds);
+
+  let secondLeft = seconds;
+  const hours = Math.floor(secondLeft / 3600);
+  secondLeft = secondLeft % 3600;
+
+  const mins = Math.floor(secondLeft / 60);
+  secondLeft = secondLeft % 60;
+
+  console.log(hours, mins, secondLeft);
 </script>
 </body>
 </html>
