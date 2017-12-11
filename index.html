@@ -183,6 +183,12 @@
   </ul>
 <script>
   const timeData = Array.from(document.querySelectorAll('[data-time]'));
+  const seconds = timeData
+  .map(node =>node.dataset.time) //list of strings
+  .map(timeCode => {
+    const [mins, secs] = timeCode.split(':');
+    console.log(mins, secs)
+  }) // turn into seconds
 </script>
 </body>
 </html>
